@@ -15,6 +15,7 @@ app.get('/data', (req, res) => {
     });
 });
 
+// this is done so the jest server wont use port 3000
 if (process.env.NODE_ENV !== 'test') {
     app.listen(PORT, () => {
         console.log(`Backend running on port: ${PORT}`);
