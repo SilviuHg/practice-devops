@@ -2,7 +2,7 @@ document.getElementById('fetch-btn').addEventListener('click', async () => {
     try {
         // k8s: acces BE on NodePort 30001
         // for local testing: http://localhost:3000/data
-        const response = await fetch('http://localhost:3000/data');
+        const response = await fetch('http://localhost:30001/data');
         const data = await response.json();
 
         document.getElementById('msg').innerText = data.message;
